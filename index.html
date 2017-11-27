@@ -2,9 +2,15 @@
 <html>
   <body>
     <link href="style.css" type="text/css" rel="stylesheet">
-    <input type="text" placeholder="Type a message...">
-    <button type="button button4">Post Message</button><br />
-    <p>My GPA is so low that it's got boots with the furs
+
+    <form id="form_1" action="/log_page.php">
+      <input type="text" placeholder="Type a message..." name="messages">
+      <button type="button" onclick="myFunction()">Post a Message</button><br />
+    </form>
+
+    <p>My GPA is so low that it's got boots with the furs</p>
     <p>My potted cactus died... I'm literally less nourishing than the desert</p>
+
+    <script src="app.js"></script>
   </body>
 </html>
