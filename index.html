@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <body>
+  <head>
     <link href="style.css" type="text/css" rel="stylesheet">
 
-    <div id="container">
+    <!-- div id="container" -->
+
       <div id="inputs">
-      <form id="form_1" action="#" onsubmit="myFunction">
-        <input class ="typingSpace" type="text" placeholder="Type a message..." name="messages">
-        <button class="submitButton" type="button" onclick="myFunction()">Post a Message</button><br />
+      <form id="form_messages" action="#" onsubmit="addMessage">
+        <input id="messages" type="text" placeholder="Type a message...">
+        <button class="submitButton" type="button" onclick="addMessage()">Post a Message</button><br />
       </form>
       </div>
-      <div id="messages">
-      <p>My GPA is so low that it's got boots with the furs</p>
-      <p>My potted cactus died... I'm literally less nourishing than the desert</p>
-      </div>
-    </div>
 
+      <div>
+    <!--/div --->
     <script src="app.js"></script>
+  </head>
+  <body>
+    <div id="post">
+      <p id="userMessages">Hello</p>
+    </div>
   </body>
 </html>

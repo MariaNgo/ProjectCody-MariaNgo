@@ -10,6 +10,6 @@
 }
 
 
-.submitButton {
+#form_messages .submitButton {
   float: right;
 }
