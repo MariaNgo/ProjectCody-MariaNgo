@@ -1,5 +1,14 @@
-input, button {
+
+#container {
+  background-color: white;
+}
+
+#inputs {
   color: white;
   background: turquoise;
   padding: 15px;
+}
+
+.submitButton {
+  float: right;
 }

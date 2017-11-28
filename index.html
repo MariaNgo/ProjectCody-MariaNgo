@@ -3,13 +3,18 @@
   <body>
     <link href="style.css" type="text/css" rel="stylesheet">
 
-    <form id="form_1" action="/log_page.php">
-      <input type="text" placeholder="Type a message..." name="messages">
-      <button type="button" onclick="myFunction()">Post a Message</button><br />
-    </form>
-
-    <p>My GPA is so low that it's got boots with the furs</p>
-    <p>My potted cactus died... I'm literally less nourishing than the desert</p>
+    <div id="container">
+      <div id="inputs">
+      <form id="form_1" action="#" onsubmit="myFunction">
+        <input type="text" placeholder="Type a message..." name="messages">
+        <button class="submitButton" type="button" onclick="myFunction()">Post a Message</button><br />
+      </form>
+      </div>
+      <div id="messages">
+      <p>My GPA is so low that it's got boots with the furs</p>
+      <p>My potted cactus died... I'm literally less nourishing than the desert</p>
+      </div>
+    </div>
 
     <script src="app.js"></script>
   </body>
