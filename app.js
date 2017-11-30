@@ -12,16 +12,30 @@ function addMessage() {
 
   newsfeed.appendChild(newPara);
 
-  // Form clear
-  document.getElementById("form_messages").reset();
 
 /*  newText.appendChild(postToNewsFeed);
   document.body.appendChild(newText);
 */
 
-  var submitBtn = document.getElementById("submitButton");
-
   var firebaseRef = firebase.database().ref();
 
-  firebaseRef.child("Text").set("Some Values");
+  var messageText = document.getElementById("messages").value;
+
+  //firebaseRef.child("Text").set("Some Value");
+  firebaseRef.push().set(messageText);
+
+  // Form clear
+  document.getElementById("form_messages").reset();
 }
+
+var mainText = document.getElementById("messages");
+var submitBtn = document.getElementById("submitButton");
+var fireHeading = document.getElementById("Heading");
+
+var firebaseHeadingRef = firebase.database().ref().child("Heading");
+
+firebaseHeadingRef.on('value', function(datasnapshot) {
+
+  Heading.innerText = datasnapshot;
+
+});
