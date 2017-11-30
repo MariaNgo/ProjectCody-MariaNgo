@@ -18,30 +18,10 @@ function addMessage() {
 /*  newText.appendChild(postToNewsFeed);
   document.body.appendChild(newText);
 */
-}
 
+  var submitBtn = document.getElementById("submitButton");
 
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyCvRk801MNuTBSOxeXrWB-B4GBjN9_6Llo",
-  authDomain: "projectcodymariango.firebaseapp.com",
-  databaseURL: "https://projectcodymariango.firebaseio.com",
-  projectId: "projectcodymariango",
-  storageBucket: "",
-  messagingSenderId: "975071454761"
-};
-firebase.initializeApp(config);
+  var firebaseRef = firebase.database().ref();
 
-/*
-// Create a new reference to a location (folder) named messages
-let messagesRef = firebase.database().ref("stored_messages");
-
-// Create a new messgae in my firebase
-messagesRef.push().set(saveData)
-*/
-
-function writeUserData(postToNewsFeed) {
-  firebase.database().ref("stored_messages").set({
-    data: postToNewsFeed
-  });
+  firebaseRef.child("Text").set("Some Values");
 }

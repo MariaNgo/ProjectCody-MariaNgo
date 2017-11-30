@@ -8,7 +8,7 @@
       <div id="inputs">
       <form id="form_messages" action="#" onsubmit="addMessage">
         <input id="messages" type="text" placeholder="Type a message...">
-        <button class="submitButton" type="button" onclick="addMessage()">Post a Message</button><br />
+        <button id="submitButton" type="button" onclick="addMessage()">Post a Message</button><br />
       </form>
       </div>
 
@@ -16,18 +16,24 @@
     <!--/div --->
 
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-messaging.js"></script>
-
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCvRk801MNuTBSOxeXrWB-B4GBjN9_6Llo",
+        authDomain: "projectcodymariango.firebaseapp.com",
+        databaseURL: "https://projectcodymariango.firebaseio.com",
+        projectId: "projectcodymariango",
+        storageBucket: "projectcodymariango.appspot.com",
+        messagingSenderId: "975071454761"
+      };
+      firebase.initializeApp(config);
+    </script>
 
     <script src="app.js"></script>
   </head>
   <body>
     <div id="post">
-      <p id="userMessages">Hello</p>
+      <p id="userMessages"></p>
     </div>
   </body>
 </html>
